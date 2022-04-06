@@ -35,7 +35,7 @@ class HttpUtils
      * @param boolean $replace Indicates whether the header should replace a previous similar header.
      * @param int $http_response_code Forces the HTTP response code to the specified value.
      */
-    public static function setResponseHeader($string, $replace = true, $http_response_code = null)
+    public static function setResponseHeader($string, $replace = true, $http_response_code = 0)
     {
         if (!defined('UNIT_TESTING')) {
             header($string, $replace, $http_response_code);
