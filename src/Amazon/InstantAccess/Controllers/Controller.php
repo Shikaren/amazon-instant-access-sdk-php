@@ -79,7 +79,7 @@ abstract class Controller
 
             // convert all errors to exception so they can be caught and not just break the script
             set_error_handler(
-                function ($code, $message, $file, $line, $context) {
+                function ($code, $message, $file, $line) {
                     throw new \Exception($message, $code);
                 }
             );
